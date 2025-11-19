@@ -40,6 +40,7 @@ export interface GameResult {
   isPlayerPair: boolean;
   isBankerPair: boolean;
   payout: number;
+  totalBet: number;
   timestamp: number;
   balanceAfter: number;
 }
