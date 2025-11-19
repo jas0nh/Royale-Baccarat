@@ -228,6 +228,7 @@ export default function App() {
       isPlayerPair: isPair([c1, c3]), // Only first two cards count for pair bet
       isBankerPair: isPair([c2, c4]),
       payout: 0,
+      totalBet,
       timestamp: Date.now(),
       balanceAfter: 0
     };
@@ -258,8 +259,13 @@ export default function App() {
 
     // PnL Logic: Current Balance + Total Withdrawn - Total Deposited
     // We use the calculated newBalance because setBalance state update might be async in PnL calculation
-    const currentPnL = (newBalance + totalWithdrawn) - totalDeposited;
-    setPnlData(prev => [...prev, { hand: prev.length, pnl: currentPnL }]);
+    setPnlData(prev => {
+      const lastPnl = prev[prev.length - 1]?.pnl ?? 0;
+      const nextHand = prev.length;
+      const cumulativePnl = lastPnl + netProfit;
+
+      return [...prev, { hand: nextHand, pnl: cumulativePnl }];
+    });
 
     // AI Commentary
     const aiText = await getDealerCommentary(result, pScore, bScore, totalPayout);
