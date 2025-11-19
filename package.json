@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://<YOUR_GITHUB_USERNAME>.github.io/<REPO_NAME>",
+  "homepage": "https://jas0nh.github.io/Royale-Baccarat",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
