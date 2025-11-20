@@ -25,6 +25,10 @@ jobs:
         run: npm install  # 不使用 npm ci，因为 npm ci 需要 package-lock.json
 
       - run: npm run build
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
       # 其余步骤保持不变
 
 
