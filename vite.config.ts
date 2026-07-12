@@ -6,8 +6,7 @@ export default defineConfig(({ mode }) => {
   
   return {
     plugins: [react()],
-    // CHANGE THIS: If deploying to https://<USERNAME>.github.io/<REPO>/, set base to '/<REPO>/'
-    base: '/Royale-Baccarat/', 
+    base: '/',
     define: {
       // This polyfills process.env.API_KEY so the code works without changes.
       // In production, this key is embedded in the build.

@@ -6,6 +6,8 @@
 
 An interactive, AI-assisted Baccarat experience featuring a conversational dealer, strategy insights, and real-time bankroll tracking. The app simulates hands, explains outcomes, and visualizes cumulative profit to keep every session engaging.
 
+Public site: https://royale-baccarat.pages.dev/
+
 > View the AI Studio app: https://ai.studio/apps/drive/1jFQWY8hhaROusYJNS1BfxHlDKSM1PG3j
 
 ## Features
@@ -45,3 +47,11 @@ Create an optimized production build:
 ```bash
 npm run build
 ```
+
+## Deployment
+
+Cloudflare Pages deploys the `main` branch automatically from GitHub.
+
+- Build command: `npm run build`
+- Build output directory: `dist`
+- Root directory: `/`
