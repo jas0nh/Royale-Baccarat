@@ -31,7 +31,7 @@ Add your gameplay screenshot here:
 ### Installation
 1. Install dependencies:
    ```bash
-   npm install
+   pnpm install
    ```
 2. Create `.env.local` and set your Gemini API key:
    ```bash
@@ -39,19 +39,19 @@ Add your gameplay screenshot here:
    ```
 3. Run the development server:
    ```bash
-   npm run dev
+   pnpm run dev
    ```
 
 ### Build
 Create an optimized production build:
 ```bash
-npm run build
+pnpm run build
 ```
 
 ## Deployment
 
 Cloudflare Pages deploys the `main` branch automatically from GitHub.
 
-- Build command: `npm run build`
+- Build command: `pnpm run build`
 - Build output directory: `dist`
 - Root directory: `/`
